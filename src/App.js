@@ -1,12 +1,11 @@
 
-import NavBar from './componentes/NavBar'
-import ItemListContainer from './componentes/ItemListContainer';
-import Footer from './componentes/Footer';
-import Shop from './componentes/Shop';
-import Category from './componentes/category';
-import Promo from './componentes/Promo';
-import Blog from './componentes/ShopSport';
-import ProductPage from './componentes/ProductPage';
+import NavBar from './components/NavBar'
+import ItemListContainer from './components/ItemListContainer';
+import Footer from './components/Footer';
+import Shop from './components/Shop';
+import Category from './components/category';
+import Promo from './components/Promo';
+import ShopSport from './components/ShopSport';
 
 function App() {
   return (
@@ -15,12 +14,13 @@ function App() {
     <ItemListContainer greeting={"Bienvenido a la primera entrega de react"}/>
     <Shop/>
     <Category/>
-    <Blog/>
+    <ShopSport/>
     <Promo/>
     <Footer/>
     
     </>
   );
 }
+
 
 export default App;
