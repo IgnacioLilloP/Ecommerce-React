@@ -1,31 +1,23 @@
 import React from "react";
 import CartWidget from "./CartWidget";
+import { Link } from "react-router-dom";
+
 
 const NavBar = () => {
      return(
       <>
   <div className="navbar bg-base-100 colornav">
   <div className="navbar-start font-medium" >
-  <div class="flex-none ">
-    <ul class="menu menu-horizontal p-0 ">
-      <li><a>Inicio</a></li>
-      <li tabindex="0">
-        <a>
-          Catálogo
-          <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>
-        </a>
-        <ul classname="p-2 bg-base-100 colornav" >
-          <li><a>Solar</a></li>
-          <li><a>Cuarzo</a></li>
-          <li><a>Mecanico</a></li>
-        </ul>
-      </li>
-      <li><a>Nosotros</a></li>
+  <div className="flex-none ">
+    <ul className="menu menu-horizontal p-0 ">
+    <li><Link to = "/">Inicio</Link></li>
+    <li><Link to ="/category/Clasico">Clasicos</Link></li>
+    <li><Link to = "/category/Deportivo">Deportivos</Link></li>
     </ul>
   </div>
   </div>
   <div className="navbar-center">
-    <a className="btn btn-ghost normal-case text-5xl">One O'clock</a>
+    <a className="btn btn-ghost normal-case text-5xl"><Link to = "/">One O'clock</Link></a>
   </div>
   <div className="navbar-end">
   <div className="dropdown dropdown-end mr-10">
@@ -64,7 +56,6 @@ const NavBar = () => {
      
      )
 
-    
 }
 
 export default NavBar

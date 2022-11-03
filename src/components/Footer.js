@@ -5,7 +5,7 @@ const Footer = () => {
         <>
         <footer className="footer p-10 bg-base-200 text-base-content colorfooter">
         <div>
-          <img className="logo" src="img/logoreact.png"/>
+          <img className="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png?20220125121207"/>
           <p>One O'clock.<br/>Dando la hora desde 1980</p>
         </div> 
         <div>

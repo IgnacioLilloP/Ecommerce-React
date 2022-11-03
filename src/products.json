@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1,
+    "category": "Clasico",
+    "title": "SPB303",
+    "description": "Línea Prestige",
+    "price": "1.590.000",
+    "urlPicture": "https://www.seikowatches.com/es-es/-/media/Images/Product--Image/All/Seiko/2022/04/02/13/16/SPB303J1/SPB303J1.png?mh=1000&mw=1000&hash=01A4573B3003CA1D5372C2D7DFBA551D",
+    "href": "#",
+    "imageAlt": "Front of men's Basic Tee in black."
+  },
+  {
+    "id": 2,
+    "category": "Clasico",
+    "title": "SPB319",
+    "description": "Línea Prestige",
+    "price": "1.750.000",
+    "urlPicture": "https://www.seikowatches.com/es-es/-/media/Images/Product--Image/All/Seiko/2022/05/02/12/15/SPB319J1/SPB319J1.png?mh=1000&mw=1000&hash=702137E283E1B767A1199406A6D09357",
+    "href": "#",
+    "imageAlt": "Front of men's Basic Tee in black."
+
+  },
+  {
+    "id": 3,
+    "category": "Clasico",
+    "title": "SRPH89",
+    "description": "Línea Básica",
+    "price": "670.000",
+    "urlPicture": "https://www.seikowatches.com/es-es/-/media/Images/Product--Image/All/Seiko/2022/05/06/11/37/SRPH89K1/SRPH89K1.png?mh=1000&mw=1000&hash=E235530358E28B6C8F52A469E51AF5B3",
+    "href": "#",
+    "imageAlt": "Front of men's Basic Tee in black."
+  },
+  {
+    "id": 4,
+    "category": "Clasico",
+    "title": "SSA447",
+    "description": "Línea Básica",
+    "price": "3000.000",
+    "urlPicture": "https://www.seikowatches.com/es-es/-/media/Images/Product--Image/All/Seiko/2022/05/06/11/38/SSA447J1/SSA447J1.png?mh=1000&mw=1000&hash=2B16E453026AEB5A9839F899E955005A",
+    "href": "#",
+    "imageAlt": "Front of men's Basic Tee in black."
+  },
+  {
+    "id": 5,
+    "category": "Deportivo",
+    "title": "SRPH73",
+    "description": "SKX Street Style",
+    "price": "520.0000",
+    "urlPicture": "https://www.seikowatches.com/es-es/-/media/Images/Product--Image/All/Seiko/2022/02/20/02/43/SRPH73K1/SRPH73K1.png?mh=1000&mw=1000&hash=623A1C3EE89443E822D3DAE06C0D6985",
+    "href": "#",
+    "imageAlt": "Front of men's Basic Tee in black."
+  },
+  {
+    "id": 6,
+    "category": "Deportivo",
+    "title": "SRPH63",
+    "description": "SKX Street Style",
+    "price": "300.000",
+    "urlPicture": "https://www.seikowatches.com/es-es/-/media/Images/Product--Image/All/Seiko/2022/02/20/02/25/SRPE72K1/SRPE72K1.png?mh=1000&mw=1000&hash=64405B1ACEFEDD802BEAA56C1E0B8254",
+    "href": "#",
+    "imageAlt": "Front of men's Basic Tee in black."
+  },
+  {
+    "id": 7,
+    "category": "Deportivo",
+    "title": "SRPE72",
+    "description":  "SKX Street Style",
+    "price": "460.000",
+    "urlPicture": "https://www.seikowatches.com/es-es/-/media/Images/Product--Image/All/Seiko/2022/02/20/02/42/SRPH63K1/SRPH63K1.png?mh=1000&mw=1000&hash=5D309340A001E951524BAD52024B8DA9",
+    "href": "#",
+    "imageAlt": "Front of men's Basic Tee in black."
+  },
+  {
+    "id": 8,
+    "category": "Deportivo",
+    "title": "SRPJ39",
+    "description": "SKX Street Style",
+    "price": "350.000",
+    "urlPicture": "https://www.seikowatches.com/es-es/-/media/Images/Product--Image/All/Seiko/2022/07/22/11/49/SRPJ39K1/SRPJ39K1.png?mh=1000&mw=1000&hash=677B539BFD2A2B466216E7AEC9DD6590",
+    "href": "#",
+    "imageAlt": "Front of men's Basic Tee in black."
+  }
+]

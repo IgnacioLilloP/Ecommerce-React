@@ -12,6 +12,7 @@ body {
   background-color: white;
 }
 
+
 .colornav {
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
   color: black;
@@ -66,4 +67,8 @@ body {
   width: 100px;
   height: 100px;
   
+}
+
+.titulo{
+  font-size: 80px;
 }
