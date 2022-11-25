@@ -3,7 +3,7 @@
 
 E-commerce creado para el curso de React JS en CoderHouse.
 
-Mi nombre es Ignacio Lillo Poblete. Ingeniero en sonido y entusiasta de la computación. actualmente, estoy estudiando programación de manera autodidacta y tomando cursos en distintas plataformas. Tengo certificados de Desarrollo Web y JavaScript cursados en CoderHouse, donde pueden revisar mis proyectos vistando mi perfil.
+Mi nombre es Ignacio Lillo Poblete. Ingeniero en sonido y entusiasta de la computación. Actualmente, estoy estudiando programación de manera autodidacta y tomando cursos en distintas plataformas. Tengo certificados de Desarrollo Web y JavaScript cursados en CoderHouse, donde pueden revisar mis proyectos vistando mi perfil.
 
 El objetivo de este proyecto fue realizar un E-commerce con la librería de JavaScript React, utilizando y creando distintos componentes para lograr una navegación fluida y ordenada donde el usuario pueda navegar por la página y sus productos, ver el detalle de cada uno, agregar y eliminar ítems de su carrito de compra y poder generar una orden de pedido con su respectiva ID.
 
