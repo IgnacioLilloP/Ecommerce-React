@@ -15,11 +15,7 @@ El objetivo de este proyecto fue realizar un E-commerce con la librería de Java
 ![App Screenshot](https://docs.github.com/assets/cb-20363/images/help/repository/code-button.png)
 
 
-
-
-
 - Luego copiamos la URL en la pestaña HTTPS del proyecto.
-
 ![App Screenshot](https://docs.github.com/assets/cb-33207/images/help/repository/https-url-clone-cli.png)
 
 - Creamos una carpeta en nuestro computador donde almacenaremos la copia del proyecto.
