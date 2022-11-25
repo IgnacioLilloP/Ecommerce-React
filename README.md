@@ -1,70 +1,73 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# ONE O'CLOCK 
 
-## Available Scripts
+E-commerce creado para el curso de React JS en CoderHouse.
 
-In the project directory, you can run:
+Mi nombre es Ignacio Lillo Poblete. Ingeniero en sonido y entusiasta de la computación. actualmente, estoy estudiando programación de manera autodidacta y tomando cursos en distintas plataformas. Tengo certificados de Desarrollo Web y JavaScript cursados en CoderHouse, donde pueden revisar mis proyectos vistando mi perfil.
 
-### `npm start`
+El objetivo de este proyecto fue realizar un E-commerce con la librería de JavaScript React, utilizando y creando distintos componentes para lograr una navegación fluida y ordenada donde el usuario pueda navegar por la página y sus productos, ver el detalle de cada uno, agregar y eliminar ítems de su carrito de compra y poder generar una orden de pedido con su respectiva ID.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Instalación
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Primero debemos dirigirnos a la página principal del repositorio.
 
-### `npm test`
+- En la lista de archivos, hacer click en Code.
+![App Screenshot](https://docs.github.com/assets/cb-20363/images/help/repository/code-button.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Luego copiamos la URL en la pestaña HTTPS del proyecto.
 
-### `npm run eject`
+![App Screenshot](https://docs.github.com/assets/cb-33207/images/help/repository/https-url-clone-cli.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Creamos una carpeta en nuestro computador donde almacenaremos la copia del proyecto.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Abrimos una terminal en nuestro computador. Puede ser PowerShell, GitBash, etc.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Pasos a seguir en la terminal
 
-### Code Splitting
+Clonar el proyecto.
+```bash
+  git clone https://github.com/IgnacioLilloP/Ecommerce-React.git
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Ir a carpeta local creada para almacenar el proyecto.
+```bash
+  cd my-project
+```
 
-### Analyzing the Bundle Size
+Instalar las dependencias faltantes.
+```bash
+  npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Iniciar el servidor.
+```bash
+  npm run start
+```
 
-### Making a Progressive Web App
+6- Una vez finalizados estos pasos, la página se mostrará y podremos acceder a los archivos del proyecto desde Visual Studio Code.
+## Dependencias utilizadas
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- React Bootstrap "2.6.0" : Se utilizó en los componentes NavBar, Cards y Modals para dar estructura al diseño y frontend de la página.
 
-### Advanced Configuration
+- SweetAlert2: Para crear una ventana emergente a la hora de agregar un producto al carrito y mostrar al usuario su ID de compra al realizar el proceso de manera exitosa.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- FireBase: Cumple la función de base de datos en el proyecto, donde se almacena la información de los productos.
 
-### Deployment
+- React Route DOM: Para definir rutas de navegación dentro de la aplicación sin tener que hacer peticiones nuevas al servidor.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Demo
+
+Demostración de funcionamiento
+
+![Alt Text](https://media1.giphy.com/media/rDjBFLo4RQwXKAf5Sr/giphy.gif?cid=790b7611704d906658b2377b2397bd2608cf7255a1e757bb&rid=giphy.gif&ct=g)
+

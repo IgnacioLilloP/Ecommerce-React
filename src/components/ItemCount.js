@@ -1,65 +1,42 @@
-import { useState } from "react";
+import React, { useState } from "react";
+import "./styles.css";
+import botonmas from "../img/bx-plus-circle.svg";
+import botonmenos from "../img/bx-minus-circle.svg";
+import { Button } from "react-bootstrap";
 
-const ItemCount = ({handleOnAdd}) => {
 
-    //handleOnAdd("Hola")
+const ItemCount = ({ stock, initial, onAdd }) => {
 
-    //paso 3 ) recibir el callback como prop
+  const [counter, setCounter] = useState(initial);
 
-    const [count, setCount] = useState(0);
-
-    /* const handleSumar = (mensaje) => {
-        console.log(mensaje)
-        setCount(count + 1);
-    } */
-
-    //e.stopPropagation()
-    //Propagacion de eventos : Bubbling y Capturing
-    
-    const handleSumar = (e) => {
-        console.log(e)
-        console.log(e.target)
-        e.stopPropagation()
-        //const btn = document.querySelector("button"); === e.target
-        setCount(count + 1);
+  const sumar = () => {
+    if (counter < stock) {  
+      setCounter(counter + 1);
     }
+  };
 
-    const handleRestar = (e) => {
-        console.log(e.target)
-        setCount(count - 1);
+  const restar = () => {
+    if (counter > initial) {
+      setCounter(counter - 1);
     }
+  };
 
-    const handleChange = (e) => {
-        //e.preventDefault()
-        const codigo = e.key.charCodeAt()
-        if (codigo > 96 && codigo < 123) {
-            console.log(e.key,codigo)
-        }else{
-            e.preventDefault()
-        }
-    }
+  return (
+    <div className="numero">
+      <div className="m-2" >
+        <button className="btnsumres"  onClick={() => restar()}>
+        <img className="btnpx" src={botonmenos} alt="boton menos"/>
+        </button>
+       {counter}
+        <button className="btnsumres"  onClick={() => sumar()}>
+          <img className="btnpx"  src={botonmas} alt="boton mas"/>
+        </button>
+      </div>
+      <Button  variant="dark" onClick={() => onAdd(counter) }>
+        Agregar Producto
+      </Button>
+    </div>
+  );
+};
 
-
-    const handleConfirmar = () => { 
-        //paso 4 ) ejecutar el callback cuando yo quiero
-        handleOnAdd(count)
-    }
-
-    const handleDivClick = (e) => {
-        console.log(e.target)
-    }
-
-    return (
-        <div onClick={handleDivClick}>
-            <div className="counter-actions">
-                <p>{count}</p>
-                <button onClick={handleRestar}>-</button>
-                <button onClick={handleSumar}>+</button>
-            </div>
-            <button onClick={handleConfirmar}>confirmar</button>
-        </div>
-    )
-
-}
-
-export default ItemCount
+export default ItemCount;

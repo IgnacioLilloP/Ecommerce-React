@@ -1,35 +1,49 @@
-import React from "react"
+import React, { useContext, useState } from "react";
+import "./styles.css";
+import ItemCount from "./ItemCount";
+import { Link } from "react-router-dom";
+import Card from "react-bootstrap/Card";
+import { contexto } from "./CustomProvider";
+import { Button } from "react-bootstrap";
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
 
-function ItemDetail({ item }) {
+
+const ItemDetail = ({ product }) => {
+  const [irAlCarrito, setIrAlCarrito] = useState(false);
+  const { addItem } = useContext(contexto);
+
+  const onAdd = (cantidad) => {
+    const MySwal = withReactContent(Swal);
+    MySwal.fire({
+      title: <strong>Ítem añadido al carrito</strong>,
+      icon: "success",
+    });
+    addItem(product, cantidad);
+    setIrAlCarrito(true);
+  };
+
   return (
     <div>
-    <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
-      <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-7 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-10">
-          <div key={item.id} className="group relative">
-            <div className="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:aspect-none lg:h-80">
-              <img
-                src={item.urlPicture}
-                alt={item.imageAlt}
-                className="h-full w-full object-cover object-center lg:h-full lg:w-full"
-              />
-            </div>
-            <div className="mt-4 flex justify-between">
-              <div>
-                <h3 className="text-sm text-gray-700">
-                    <span aria-hidden="true" className="absolute inset-0" />
-                    {item.title}
-                </h3>
-                <p className="mt-1 text-sm text-gray-500">{item.description}</p>
-              </div>
-              <p className="text-sm font-medium text-gray-900">${item.price}</p>
-            </div>
-
-          </div>
-      </div>
+    <Card style={{ width: "20rem" }} className="card">
+    <Card.Img variant="top" className="fondo" src={product.urlPicture} />
+      <Card.Body>
+        <Card.Title>{product.title}</Card.Title>
+        <Card.Text>{product.description}</Card.Text>
+        <Card.Text>${product.price}</Card.Text>
+        {irAlCarrito ? (
+          <Button variant="dark">
+            <Link to="/cart" className="link">
+              Ir a Carrito
+            </Link>
+          </Button>
+        ) : (
+          <ItemCount stock={10} initial={1} onAdd={onAdd} />
+        )}
+      </Card.Body>
+    </Card>
     </div>
-    </div>
-  )
-}
+  );
+};
 
-
-export default ItemDetail
+export default ItemDetail;

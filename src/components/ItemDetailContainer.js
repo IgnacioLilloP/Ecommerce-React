@@ -1,30 +1,38 @@
-import React from 'react'
-import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
-import ItemDetail from './ItemDetail'
-import { getProductById } from "./utils"
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import "./styles.css";
+import ItemDetail from "./ItemDetail";
+import { getFirestore } from "./firebase";
+import Load from "./Spinner";
 
-function ItemDetailContainer() {
+const ItemDetailContainer = () => {
+  const { itemId } = useParams();
+  const [product, setProduct] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-    const [item, setItems] = useState([])
+  useEffect(() => {
+    setLoading(true);
+    const db = getFirestore();
+    const itemCollection = db.collection("productos");
+    const item = itemCollection.doc(itemId);
+    item
+      .get()
+      .then((doc) => {
+        setProduct({ id: doc.id, ...doc.data() });
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }, [itemId]);
 
-    const { elementId } = useParams()
+  return (
+    <div className="itemDetailContainer">
+      {loading ? <Load/> : <ItemDetail product={product} />}
+    </div>
+  );
+};
 
-    useEffect(() => {
-        getProductById(elementId)
-            .then(res => {
-                setItems(res)
-            })
-            .catch(err => {
-                console.log(err)
-            })
-    }, [elementId])
-
-    return (
-        <>
-            {item.length == 0 ? <h1>Cargando...</h1> : <ItemDetail item={item} /> }
-        </>
-
-    )
-}
-export default ItemDetailContainer
+export default ItemDetailContainer;
