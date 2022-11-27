@@ -30,7 +30,7 @@ const ItemDetailContainer = () => {
 
   return (
     <div className="itemDetailContainer">
-      {loading ? <Load/> : <ItemDetail product={product} />}
+      {loading ? <Load /> : <ItemDetail product={product} />}
     </div>
   );
 };

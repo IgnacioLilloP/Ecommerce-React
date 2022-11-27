@@ -57,7 +57,7 @@ const ItemListContainer = ({ greeting }) => {
     <div className="main m-4">
       <h2>{greeting}</h2>
       <div className="itemListContainer m-5">
-        { loading ? <Load /> : <ItemList products={products} />}
+        {loading ? <Load /> : <ItemList products={products} />}
       </div>
     </div>
   );

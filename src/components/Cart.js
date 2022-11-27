@@ -3,16 +3,16 @@ import { Link } from "react-router-dom";
 import { contexto } from "./CustomProvider";
 import "./styles.css";
 import { getFirestore } from "./firebase";
-import firebase from 'firebase/compat/app';
+import firebase from "firebase/compat/app";
 import Table from "react-bootstrap/Table";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import Webpay from "../img/webpay.png";
 import Paypal from "../img/logo-Paypal.png";
-import Swal from 'sweetalert2'
-import withReactContent from 'sweetalert2-react-content'
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
 
-const MySwal = withReactContent(Swal)
+const MySwal = withReactContent(Swal);
 
 const Cart = () => {
   const { cart, removeItem, clear, totalCarrito } = useContext(contexto);
@@ -63,15 +63,18 @@ const Cart = () => {
 
   return (
     <div>
-      {orderId && (
+      {orderId &&
         MySwal.fire({
-          title: <strong>Compra exitosa! <br/> Tú id de compra es:</strong>,
+          title: (
+            <strong>
+              Compra exitosa! <br /> Tú id de compra es:
+            </strong>
+          ),
           html: <i>{orderId}</i>,
-          icon: 'success'
-        }).then(function() {
-          window.location.href ="/";
-      })
-      )}
+          icon: "success",
+        }).then(function () {
+          window.location.href = "/";
+        })}
       {cart.length === 0 ? (
         <>
           <h2 className="m-5">Carrito Vacio...</h2>
@@ -103,7 +106,6 @@ const Cart = () => {
                       <Button variant="danger" onClick={() => removeItem(i.id)}>
                         Eliminar
                       </Button>
-                    
                     </td>
                   </tr>
                 </tbody>
@@ -111,18 +113,21 @@ const Cart = () => {
             </Table>
             <h2>Total: ${total}</h2>
             <div>
-
-            <Button  className="m-md-3 " variant="dark" onClick={() => clear()}>
-              Vaciar Carrito
-            </Button>
-            <Button variant="success" onClick={handleShow}>
-              Realizar Pedido
-            </Button>
+              <Button
+                className="m-md-3 "
+                variant="dark"
+                onClick={() => clear()}
+              >
+                Vaciar Carrito
+              </Button>
+              <Button variant="success" onClick={handleShow}>
+                Realizar Pedido
+              </Button>
             </div>
 
-            <Modal show={show} onHide={handleClose} >
+            <Modal show={show} onHide={handleClose}>
               <Modal.Header closeButton>
-                <Modal.Title >Rellena tus datos</Modal.Title>
+                <Modal.Title>Rellena tus datos</Modal.Title>
               </Modal.Header>
               <Modal.Body>
                 <form onSubmit={terminarCompra}>
@@ -178,7 +183,7 @@ const Cart = () => {
                       required
                     />
                     <label className="form-label" f for="validationDefault04">
-                    Teléfono
+                      Teléfono
                     </label>
                   </div>
                   <div className="centrar gap-5">
